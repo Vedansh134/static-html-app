@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Site in Docker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-docker"></i> Static HTML in Docker</h1>
+            <p class="subtitle">Serving static files from a container</p>
+        </header>
+        
+        <main>
+            <div class="card">
+                <h2><i class="fas fa-info-circle"></i> About This Container</h2>
+                <p>This is a simple static HTML page served from a Docker container using Nginx.</p>
+                <ul>
+                    <li><strong>Base Image:</strong> nginx:alpine</li>
+                    <li><strong>Port:</strong> 80 (inside container)</li>
+                    <li><strong>Size:</strong> ~20MB</li>
+                    <li><strong>Web Server:</strong> Nginx</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h2><i class="fas fa-rocket"></i> Docker Commands Used</h2>
+                <code class="command">docker build -t static-site .</code>
+                <code class="command">docker run -d -p 8080:80 static-site</code>
+                <p>Access at: <a href="http://localhost:8080">http://localhost:8080</a></p>
+            </div>
+            
+            <div class="card">
+                <h2><i class="fas fa-check-circle"></i> Benefits</h2>
+                <div class="benefits">
+                    <div class="benefit">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span>Portable</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                        <span>Scalable</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Consistent</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-cloud"></i>
+                        <span>Easy to Deploy</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Container ID: <span id="container-id">Loading...</span></p>
+            <p>Served from Docker container | <i class="fas fa-heart"></i> Simple Static Site</p>
+        </footer>
+    </div>
+</body>
+</html>

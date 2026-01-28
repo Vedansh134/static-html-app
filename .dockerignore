@@ -1,0 +1,13 @@
+# Git
+.git/
+.gitignore
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker files
+Dockerfile
+.dockerignore
